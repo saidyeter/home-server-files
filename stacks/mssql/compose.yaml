@@ -1,6 +1,7 @@
 services:
   mssql:
     restart: unless-stopped
+    user: root
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
@@ -8,4 +9,4 @@ services:
       - ${MSSQL_PORT}:1433
     image: mcr.microsoft.com/mssql/server:2022-latest 
     volumes:
-      - ${MSSQL_DATA_DIR}:/var/opt/mssql
+      - ${MSSQL_DATA_DIR}:/var/opt/mssql/data
