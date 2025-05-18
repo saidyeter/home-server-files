@@ -16,8 +16,6 @@ function loopOverStackEnvFiles(callback) {
     if (err) {
       console.log('Error getting directory information: ' + err);
     } else {
-      console.log(files);
-
       for (let i = 0; i < files.length; i++) {
         const parent = files[i];
         const filePath = path.join(stacksDir, parent, '.env');
@@ -54,8 +52,6 @@ function updateEnvFile(parent, filePath) {
   fs.writeFileSync(filePath, newFileContent, 'utf8')
 
   console.log(parent, 'is done')
-  console.log('################################################################################');
-
 }
 
 loopOverStackEnvFiles(updateEnvFile)
