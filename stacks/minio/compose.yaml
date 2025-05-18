@@ -1,0 +1,13 @@
+services:
+  minio:
+    restart: unless-stopped
+    ports:
+      - ${PORT}:9000
+      - ${CONSOLE_PORT}:9001
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    image: quay.io/minio/minio
+    command: server /data --console-address ":${CONSOLE_PORT}"
+    volumes:
+      - ${MINIO_DATA_DIR}:/data

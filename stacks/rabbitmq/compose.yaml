@@ -1,0 +1,15 @@
+services:
+  rabbitmq:
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - ${RABBITMQ_PORT}:5672
+      - ${RABBITMQ_DASHBOARD_PORT}:15672
+    image: rabbitmq:4-management
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ${RABBITMQ_DATA_DIR}:/var/lib/rabbitmq/
+      - ${RABBITMQ_LOG_DIR}:/var/log/rabbitmq

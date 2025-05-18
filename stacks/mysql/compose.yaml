@@ -1,0 +1,18 @@
+services:
+  phpmayadmin:
+    restart: unless-stopped
+    ports:
+      - ${PHPMYADMIN_PORT}:80
+    links:
+      - mysql:db
+    image: phpmyadmin
+  mysql:
+    restart: unless-stopped
+    ports:
+      - ${MYSQL_PORT}:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ${MYSQL_DATA_DIR}:/var/lib/mysql
+      - ${MYSQL_CONF_DIR}/etc/mysql/conf.d
+    image: mysql

@@ -1,0 +1,9 @@
+services:
+  portainer:
+    ports:
+      - ${PORT}:9443
+    restart: unless-stopped
+    volumes:
+      - ${PORTAINER_DATA_DIR}:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    image: portainer/portainer-ce:latest
