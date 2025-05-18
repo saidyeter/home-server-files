@@ -1,6 +1,6 @@
 services:
   dockge:
-    image: louislam/dockge:1
+    image: louislam/dockge
     restart: unless-stopped
     ports:
       - ${PORT}:5001

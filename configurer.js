@@ -37,7 +37,7 @@ function updateEnvFile(parent, filePath) {
     } else if (fileContent[i].includes('$STACKS_ROOT_DIR')) {
       fileContent[i] = fileContent[i].replace('$STACKS_ROOT_DIR', path.join(__dirname, 'stacks'));
     } else if (fileContent[i].includes('$GENERATE_PASSWORD')) {
-      const specialChars = '!@#$%&*()[]{}';
+      const specialChars = '([{!?,._-@#$%+;:&*)]}';
       const password = Math.random().toString(36).substring(2, 15) +
         specialChars.at(Math.floor(Math.random() * specialChars.length)) +
         Math.random().toString(36).substring(2, 15).toUpperCase();
