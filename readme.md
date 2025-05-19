@@ -32,6 +32,11 @@ I put a data folder on the root. And configured that folder path in the .env fil
 - [mssql](https://www.microsoft.com/en-us/sql-server) is a database server
 - [adminer](https://www.adminer.org/) is a database manager
 
+## useful links
+- [configureing ssl for a domaing with nginx-proxy-manager and cloudflare](https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b)
+- [setting cloudflare tunnels](https://www.youtube.com/watch?v=ey4u7OUAF3c)
+- [backup your devices to home server using syncthing](https://www.youtube.com/watch?v=PSx-BkMOPF4&t=259s)
+
 ## contributing
 If you want to add new app;
 
