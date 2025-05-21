@@ -36,6 +36,7 @@ I put a data folder on the root. And configured that folder path in the .env fil
 - [configureing ssl for a domaing with nginx-proxy-manager and cloudflare](https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b)
 - [setting cloudflare tunnels](https://www.youtube.com/watch?v=ey4u7OUAF3c)
 - [backup your devices to home server using syncthing](https://www.youtube.com/watch?v=PSx-BkMOPF4&t=259s)
+- [removing grub from dual boot in favor windows](https://www.youtube.com/watch?v=TPHUpu5ZD7c)
 
 ## contributing
 If you want to add new app;
