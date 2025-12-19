@@ -1,0 +1,8 @@
+services:
+  memos:
+    ports:
+      - 5230:5230
+    volumes:
+      - ${DATA_DIR}:/var/opt/memos
+    image: neosmemo/memos:stable
+    restart: unless-stopped
